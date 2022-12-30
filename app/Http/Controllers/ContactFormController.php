@@ -16,9 +16,8 @@ class ContactFormController extends Controller
      */
     public function index(Request $request)
     {
-        $contacts = Contactform::select('id', 'name', 'title', 'created_at')
-        ->get();
-
+        // $contacts = Contactform::select('id', 'name', 'title', 'created_at')
+        // ->get();
 
         // // ページネーション対応
         // $contacts = Contactform::select('id', 'name', 'title', 'created_at')
@@ -64,7 +63,7 @@ class ContactFormController extends Controller
             'contact' => $request->contact,
         ]);
 
-        return to_route('contacts,index');
+        return to_route('contacts.index');
     }
 
     /**

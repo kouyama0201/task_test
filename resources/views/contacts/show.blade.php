@@ -81,7 +81,7 @@
     function deletePost(e) {
       'use strict'
       if(confirm('本当に削除していいですか？')) {
-        document.getElementByid('delete_' + e.dataset.id).submit()
+        document.getElementById('delete_' + e.dataset.id).submit()
       }
     }
   </script>
